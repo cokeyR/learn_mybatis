@@ -1,0 +1,20 @@
+SqlMapConfig.xml
+mapper.xml
+	namespace
+	id
+	
+	#{}
+	resultType
+	parameterType
+
+sqlSessionFactory
+
+sqlSession
+
+session要关闭
+
+数据源的加载和设置
+sql语句的生成
+字段和po类属性的自动映射（字段名和属性名相同）
+
+autoCommit

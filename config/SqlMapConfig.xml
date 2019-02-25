@@ -9,15 +9,16 @@
       <transactionManager type="JDBC"/>
       <!-- 数据源 -->
       <dataSource type="POOLED">
-        <property name="driver" value="oracle.jdbc.OracleDriver"/>
-        <property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:mybatis"/>
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8"/>
         <property name="username" value="wangxiang"/>
         <property name="password" value="abcd1234"/>
       </dataSource>
   
     </environment>
   </environments>
+  
   <mappers>
-    <mapper resource="org/mybatis/example/BlogMapper.xml"/>
+    <mapper resource="sqlmap/User.xml"/>
   </mappers>
 </configuration>

@@ -8,8 +8,8 @@ public class ConnectTest {
 
 	private static String USERNAMR = "wangxiang";
 	private static String PASSWORD = "abcd1234";
-	private static String DRVIER = "oracle.jdbc.OracleDriver";
-	private static String URL = "jdbc:oracle:thin:@127.0.0.1:1521:mybatis";
+	private static String DRVIER = "com.mysql.jdbc.Driver";
+	private static String URL = "jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8";
 
 public static void main(String[] args) {
 	    // 创建一个数据库连接
