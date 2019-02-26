@@ -1,4 +1,4 @@
-package mybaits.po;
+package mybatis.po;
 
 import java.util.Date;
 
