@@ -3,7 +3,9 @@ package mybatis.dao;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 
+import mybatis.po.Order;
 import mybatis.po.User;
 import mybatis.tool.Factory;
 
@@ -37,7 +39,16 @@ public class UserDao {
 		session.close();
 	}
 	
+	public static User selectUserAndOrders(String userid) {
+		SqlSessionFactory sqlSessionFactory = Factory.getFactory();
+		SqlSession session=sqlSessionFactory.openSession();
+		User user = session.selectOne("user.selectUserAndOrders",userid);
+		return user;
+	}
 	public static void main(String[] args) {
-		UserDao.addUser();
+		User user=UserDao.selectUserAndOrders("1");
+		System.out.println(user);
+		for(Order order:user.getOrders())
+			System.out.println(order);
 	}
 }
